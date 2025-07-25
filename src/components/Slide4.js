@@ -42,7 +42,7 @@ const Slide4 = () => {
         <div className="flex flex-col items-center">
           {/* Gambar */}
           <div className="w-full">
-            <img src="img/antisipasi/masalah.png" alt="Masalah Lahan Terbangun" className="w-full h-80 object-cover" />
+            <img src="img/Antisipasi/masalah.png" alt="Masalah_Lahan_Terbangun" className="w-full h-80 object-cover" />
           </div>
 
           {/* Deskripsi */}

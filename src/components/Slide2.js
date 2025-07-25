@@ -6,12 +6,12 @@ const Slide2 = forwardRef((props, ref) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const images = [
-    "/img/berita/pembangunan infrastruktur (2).png",
-    "/img/berita/pembangunan infrastruktur (3).png",
-    "/img/berita/pembangunan infrastruktur (4).png",
-    "/img/berita/pertumbuhan industri (1).png",
-    "/img/berita/pertumbuhan industri (3).png",
-    "/img/berita/pertumbuhan industri (4).png",
+    "/img/Berita/pembangunan_infrastruktur_(2).png",
+    "/img/Berita/pembangunan_infrastruktur_(3).png",
+    "/img/Berita/pembangunan_infrastruktur_(4).png",
+    "/img/Berita/pertumbuhan_industri_(1).png",
+    "/img/Berita/pertumbuhan_industri_(3).png",
+    "/img/Berita/pertumbuhan_industri_(4).png",
   ];
 
   const links = [
@@ -20,7 +20,7 @@ const Slide2 = forwardRef((props, ref) => {
     "https://jatimtimes.com/baca/326029/20241125/074400/pemprov-jatim-ungkap-target-pengembangan-perumahan-dan-permukiman-2025-2045#:~:text=JATIMTIMES%20-%20Pemerintah%20Provinsi%20Jawa%20Timur%20%28Pemprov%20Jatim%29,dokumen%20Rencana%20Pembangunan%20Jangka%20Panjang%20Daerah%20%28RPJPD%29%202025%E2%80%932045",
     "https://www.suarasurabaya.net/ekonomibisnis/2021/tiga-kawasan-industri-baru-sedang-dibangun-di-jatim/",
     "https://www.kompas.id/baca/nusantara/2022/07/06/kawasan-industri-berkembang-ke-pesisir-jawa-timur",
-    "https://www.ayobandung.com/umum/7914584019/siap-saingi-cikarang-daerah-di-jawa-timur-ini-akan-bangun-kawasan-industri-1200-hektare-diproyeksikan-sebagai-the-next-rungkut"
+    "https://www.ayobandung.com/umum/7914584019/siap-saingi-cikarang-daerah-di-jawa-timur-ini-akan-bangun-kawasan-industri-1200-hektare-diproyeksikan-sebagai-the-next-rungkut",
   ];
 
   useEffect(() => {
@@ -60,21 +60,11 @@ const Slide2 = forwardRef((props, ref) => {
       animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
-      <motion.h2
-        className="text-3xl md:text-4xl mx-20 font-bold"
-        initial={{ opacity: 0, y: -30 }}
-        animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : -30 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-      >
+      <motion.h2 className="text-3xl md:text-4xl mx-20 font-bold" initial={{ opacity: 0, y: -30 }} animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : -30 }} transition={{ duration: 0.6, delay: 0.2 }}>
         Bagaimana kondisi lahan terbangun di Jawa Timur saat ini?
       </motion.h2>
 
-      <motion.p
-        className="mt-3 text-lg mx-64"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : -20 }}
-        transition={{ duration: 0.6, delay: 0.4 }}
-      >
+      <motion.p className="mt-3 text-lg mx-64" initial={{ opacity: 0, y: -20 }} animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : -20 }} transition={{ duration: 0.6, delay: 0.4 }}>
         Keberadaan lahan terbangun di suatu wilayah dapat dipengaruhi oleh beberapa faktor, seperti kawasan industri, pembangunan infrastruktur, kepadatan penduduk, dan sebagainya. Mari kita simak beritanya!
       </motion.p>
 

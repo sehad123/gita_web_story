@@ -35,7 +35,7 @@ const Slide3 = () => {
   }, []);
 
   // Image filenames: kondisi jatim 2014.png ~ 2024.png
-  const images = Array.from({ length: 11 }, (_, i) => `/img/kondisi_jatim/kondisi jatim ${2014 + i}.png`);
+  const images = Array.from({ length: 11 }, (_, i) => `/img/Kondisi_Jatim/kondisi_jatim_${2014 + i}.png`);
 
   const togglePreview = () => {
     setIsPreviewVisible(!isPreviewVisible);
