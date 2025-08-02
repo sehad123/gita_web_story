@@ -1,93 +1,125 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const perkembanganData = [
   {
-    title: "1. Perkembangan Umum (2014–2019 & 2019–2024)",
-    images: ["/img/Hasil/Perkembangan/4. 2014-2019 Changes Map (Legenda).png", "/img/Hasil/Perkembangan/5. 2019-2024 Changes Map (Legenda).png"],
+    title: "Perkembangan Secara Umum (2014–2024)",
+    images: ["/img/Hasil/Perkembangan/[2014-2019].png", "/img/Hasil/Perkembangan/[2019-2024].png"],
     description:
-      "Pada periode 2014-2019 dan 2019-2024, perkembangan lahan terbangun cenderung berada di wilayah pesisir utara. Daerah pesisir utara menunjukkan keberadaan lahan terbangun yang lebih luas jika dibandingkan dengan wilayah pesisir selatan, baik pada periode 2014-2019 maupun pada periode 2019-2024.",
+      "Perkembangan lahan terbangun yang terjadi selama periode 2014-2019 dan 2019-2024 cenderung berada di bagian utara Provinsi Jawa Timur. Pada periode 2014-2019, Kabupaten Lamongan memiliki proporsi perkembangan lahan terbangun tertinggi yaitu berkisar antara 12,17%-15,21%. Kemudian, diikuti dengan Kabupaten Gresik dan Tuban dengan rentang nilai 9,13%-12,17%. Tiga kabupaten tersebut terletak di wilayah pesisir utara Jawa Timur dan termasuk ke dalam wilayah yang dijadikan sebagai pusat perkembangan kawasan industri di Jawa Timur. Dari 14 kawasan industri yang masih beroperasi hingga saat ini di Jawa Timur, 5 di antaranya tersebar di Kabupaten Gresik, Lamongan, dan Tuban. Namun, pada periode 2019-2024, proporsi perkembangan lahan terbangun Kabupaten Lamongan tidak begitu tinggi seperti periode sebelumnya, hanya berkisar antara 6,08%-9,13%. Sedangkan, pada periode 2019-2024, Kabupaten Tuban memiliki proporsi perkembangan lahan terbangun tertinggi yang berkisar antara 9,13%-12,17%. Pada periode 2019-2024, Kabupaten Tulungagung, Nganjuk, dan Probolinggo menunjukkan peningkatan proporsi perkembangan lahan terbangun dari periode sebelumnya.",
+  },
+];
+
+const perkembanganFaktor = [
+  {
+    title: "Jaringan Jalan",
+    images: ["/img/Hasil/Perkembangan/4b. [2014-2019] perubahan thd jalan (2).png", "/img/Hasil/Perkembangan/5b. [2019-2024] perubahan thd jalan (2).png"],
+    description:
+      "Perkembangan lahan terbangun cenderung mengikuti pola jaringan jalan yang sudah ada. Kondisi ini menunjukkan bahwa adanya pengaruh aksesibilitas jalan terhadap perkembangan lahan terbangun. Jarak yang lebih dekat dengan jaringan jalan cenderung memiliki kemungkinan perubahan lahan.",
   },
   {
-    title: "2. Terhadap Jaringan Jalan",
-    images: ["/img/Hasil/Perkembangan/4b. [2014-2019] perubahan thd jalan.png", "/img/Hasil/Perkembangan/5b. [2019-2024] perubahan thd jalan.png"],
+    title: "Badan Air",
+    images: ["/img/Hasil/Perkembangan/4a. [2014-2019] perubahan thd air (2).png", "/img/Hasil/Perkembangan/5a. [2019-2024] perubahan thd air (2).png"],
     description:
-      "Perkembangan lahan terbangun cenderung mengikuti pola jaringan jalan yang sudah ada. Kondisi ini menunjukkan bahwa adanya pengaruh aksesibilitas jalan terhadap perkembangan lahan terbangun. Jarak yang lebih dekat dengan jaringan jalan cenderung memiliki kemungkinan perkembangan lahan terbangun.",
+      "Wilayah di sekitar badan air mengalami perubahan dari bukan lahan terbangun menjadi lahan terbangun. Wilayah di sekitar badan air seringkali berkembang menjadi pusat aktivitas perekonomian, seperti kawasan industri. Di Jawa Timur, sebagian besar kawasan industri memanfaatkan Pelabuhan Tanjung Perak sebagai infrastruktur pendukung dari kawasan industrinya. Oleh karena itu, wilayah yang berada di pesisir utara cenderung mengalami perubahan lahan karena banyak dilakukan pembangunan karena kemudahan akses terhadap sumber daya air untuk mendukung aktivitas perekonomian.",
   },
   {
-    title: "3. Terhadap Badan Air",
-    images: ["/img/Hasil/Perkembangan/4a. [2014-2019] perubahan thd air.png", "/img/Hasil/Perkembangan/5a. [2019-2024] perubahan thd air.png"],
-    description:
-      "Wilayah di sekitar badan air mengalami perubahan dari bukan lahan terbangun menjadi lahan terbangun. Wilayah di sekitar badan air seringkali berkembang menjadi pusat aktivitas perekonomian, seperti kawasan industri, karena kemudahan akses terhadap sumber daya air.",
-  },
-  {
-    title: "4. Terhadap DEM (Ketinggian)",
-    images: ["/img/Hasil/Perkembangan/4c. [2014-2019] perubahan thd dem.png", "/img/Hasil/Perkembangan/5c. [2019-2024] perubahan thd dem.png"],
+    title: "DEM (Ketinggian)",
+    images: ["/img/Hasil/Perkembangan/4c. [2014-2019] perubahan thd dem (2).png", "/img/Hasil/Perkembangan/5c. [2019-2024] perubahan thd dem (2).png"],
     description:
       "Wilayah dengan ketinggian rendah cenderung lebih mengalami perkembangan lahan terbangun, baik selama periode 2014-2019 maupun periode 2019-2024. Daerah dengan ketinggian rendah cenderung mudah dikembangkan, karena mudah dalam membangun konstruksi bangunan dibandingkan dengan daerah yang lebih tinggi.",
   },
   {
-    title: "5. Terhadap Kemiringan Lahan (Slope)",
-    images: ["/img/Hasil/Perkembangan/4d. [2014-2019] perubahan thd slope.png", "/img/Hasil/Perkembangan/5d. [2019-2024] perubahan thd slope.png"],
+    title: "Slope (Kemiringan)",
+    images: ["/img/Hasil/Perkembangan/4d. [2014-2019] perubahan thd slope (2).png", "/img/Hasil/Perkembangan/5d. [2019-2024] perubahan thd slope (2).png"],
     description:
       "Lahan dengan kemiringan datar hingga landai cenderung mengalami perubahan lahan terbangun, baik selama periode 2014-2019 maupun periode 2019-2024. Wilayah dengan kemiringan curam jarang dilakukan pembangunan, karena memiliki beberapa tantangan, baik secara teknis maupun non teknis.",
   },
 ];
-const Perkembangan = () => {
-  return (
-    <section className="relative overflow-hidden px-4 py-12 bg-gradient-to-b from-orange-100 via-yellow-50 to-amber-100 text-gray-800">
-      {/* Animasi Daun SVG */}
-      {Array.from({ length: 15 }).map((_, i) => (
-        <svg
-          key={i}
-          viewBox="0 0 20 20"
-          className="absolute w-6 h-6 opacity-80 animate-fall"
-          style={{
-            left: `${Math.random() * 100}%`,
-            animationDuration: `${5 + Math.random() * 5}s`,
-            animationDelay: `${Math.random() * 5}s`,
-            transform: `rotate(${Math.random() * 360}deg)`,
-          }}
-        >
-          <path d="M10 0 C12 5, 18 5, 10 20 C2 5, 8 5, 10 0 Z" fill="#DAA520" />
-        </svg>
-      ))}
 
+const Perkembangan = () => {
+  const [selectedIndex, setSelectedIndex] = useState(0); // default ke data pertama
+
+  const data = perkembanganFaktor[selectedIndex];
+  const tahunGambar = ["2014-2019", "2019-2024"];
+
+  return (
+    <section className="relative overflow-hidden px-4 py-12 bg-[#545454] text-gray-800 bg-cover"
+      style={{ backgroundImage: "url('/img/perkembangan-bg.png')" }}
+    >
       <motion.div className="relative max-w-6xl mx-auto space-y-12" initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>
-        <h2 className="text-3xl font-bold text-center mb-8">Perkembangan</h2>
+        <h4 className="text-2xl font-bold text-center text-pink-200 pb-2 pt-2">Peta Perkembangan Lahan Terbangun Jawa Timur</h4>
+        <div className="bg-pink-500 text-white text-center rounded-2xl mx-auto w-[470px]">
+          <p className="text-lg font-bold text-center text-pink-200 pb-2 pt-2">
+            Peta perkembangan lahan terbangun terhadap luas wilayah
+          </p>
+        </div>
 
         {perkembanganData.map((item, index) => (
-          <div key={index} className="space-y-4">
-            <h3 className="text-xl font-semibold">{item.title}</h3>
+          <div key={index} className="space-y-4 pb-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {item.images.map((img, i) => (
                 <div key={i} className="text-center">
-                  <p className="font-medium mb-2">{i === 0 ? "2014 - 2019" : "2019 - 2024"}</p>
-                  <img src={img} alt={`Perkembangan ${item.title}`} className="rounded-xl shadow-md w-full object-contain border-2 border-orange-500" />
+                  <div className="bg-pink-300 rounded-lg mx-auto w-[100px] h-[25px] flex justify-center items-center">
+                    <p className="text-base font-bold mb-2 mt-2">
+                      {i === 0 ? "2014-2019" : "2019-2024"}
+                    </p>
+                  </div>
+                  <div className="pt-3">
+                    <img src={img} className="rounded-xl shadow-md w-full object-contain border-2 border-white transition-transform duration-300 hover:scale-105" />
+                  </div>
                 </div>
               ))}
             </div>
-            <p className="text-justify bg-white/60 backdrop-blur p-4 rounded-lg shadow-inner">{item.description}</p>
+            <p className="text-justify bg-white/60 backdrop-blur p-4 text-sm rounded-lg shadow-inner transition-transform duration-300 hover:scale-105">{item.description}</p>
           </div>
         ))}
-      </motion.div>
 
-      {/* Keyframes animasi daun */}
-      <style jsx>{`
-        @keyframes fall {
-          0% {
-            transform: translateY(-10%) rotate(0deg);
-          }
-          100% {
-            transform: translateY(110vh) rotate(360deg);
-          }
-        }
-        .animate-fall {
-          animation-name: fall;
-          animation-timing-function: linear;
-          animation-iteration-count: infinite;
-        }
-      `}</style>
+        <div className="bg-pink-500 text-white text-center rounded-2xl mx-auto w-[600px]">
+          <p className="text-lg font-bold text-center text-pink-200 pb-2 pt-2">
+            Peta perkembangan lahan terbangun terhadap faktor pendorong
+          </p>
+        </div>
+
+        {/* Dropdown Pilihan */}
+      <div className="text-center">
+        <label className="mr-2 text-lg font-bold text-white">Pilih faktor pendorong :</label>
+        <select
+          onChange={(e) => setSelectedIndex(Number(e.target.value))}
+          value={selectedIndex}
+          className="p-2 rounded border-2 text-gray-800 font-bold bg-pink-100 text-center"
+        >
+          {perkembanganFaktor.map((item, idx) => (
+            <option key={idx} value={idx}>
+              {item.title}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      {/* Gambar dan Keterangan */}
+      <div className="space-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {data.images.map((img, i) => (
+            <div key={i} className="text-center">
+              <div className="bg-pink-300 rounded-lg mx-auto w-[100px] h-[25px] flex justify-center items-center">
+                <p className="text-base font-bold">{tahunGambar[i] || `Layer ${i + 1}`}</p>
+              </div>
+              <div className="pt-3">
+                <img
+                  src={img}
+                  alt={`Gambar ${tahunGambar[i]}`}
+                  className="rounded-xl shadow-md w-full object-contain border-2 border-white transition-transform duration-300 hover:scale-105"
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <p className="text-justify text-sm bg-white/60 backdrop-blur p-4 rounded-lg shadow-inner transition-transform duration-300 hover:scale-105">{data.description}</p>
+      </div>
+      </motion.div>
     </section>
   );
 };

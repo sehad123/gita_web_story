@@ -22,23 +22,21 @@ const Slide5 = ({ id, onScrollToNext }) => {
   return (
     <motion.section
       id={id} // Ini penting!
-      className="relative h-screen flex flex-col items-center justify-center text-center overflow-hidden"
-      style={{
-        background: "linear-gradient(to top, #fde68a 0%, #fcd34d 40%, #fbcfe8 100%)",
-      }}
+      className="relative h-[120px] bg-[#c5c5c5] flex flex-col after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[7px] after:bg-white items-center overflow-hidden shadow-2xl overflow-visible shadow-[0_20px_30px_-10px_rgba(0,0,0,0.3)]"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
+      {/*
       {/* Matahari Sore */}
-      <div className="absolute top-24 left-1/2 transform -translate-x-1/2 w-60 h-60 bg-orange-300 rounded-full z-10 shadow-md" />
-
+      {/*<div className="absolute top-24 left-1/2 transform -translate-x-1/2 w-60 h-60 bg-orange-300 rounded-full z-10 shadow-md" />
+      */}
       {/* Awan */}
-      <div className="absolute top-20 left-10 w-40 h-20 bg-white/70 rounded-full shadow-md z-20"></div>
+      {/*<div className="absolute top-20 left-10 w-40 h-20 bg-white/70 rounded-full shadow-md z-20"></div>
       <div className="absolute top-28 right-20 w-52 h-24 bg-white/70 rounded-full shadow-md z-20"></div>
-
+      */}
       {/* Gunung Belakang */}
-      <div className="absolute bottom-0 left-0 w-full z-0">
+      {/*<div className="absolute bottom-0 left-0 w-full z-0">
         <svg viewBox="0 0 1440 320" className="w-full h-64">
           <path
             fill="#52796f" // <- hijau lumut
@@ -46,16 +44,16 @@ const Slide5 = ({ id, onScrollToNext }) => {
           />
         </svg>
       </div>
-
+      */}
       {/* Gunung Depan */}
-      <div className="absolute bottom-0 left-0 w-full z-10">
+      {/*<div className="absolute bottom-0 left-0 w-full z-10">
         <svg viewBox="0 0 1440 320" className="w-full h-72">
           <path
             fill="#2f3e46" // <- hijau tua banget
             d="M0,224L60,213.3C120,203,240,181,360,181.3C480,181,600,203,720,213.3C840,224,960,224,1080,202.7C1200,181,1320,139,1380,117.3L1440,96L1440,320L0,320Z"
           />
         </svg>
-      </div>
+      </div> */}
 
       {/* Judul */}
       <motion.h1
@@ -64,10 +62,9 @@ const Slide5 = ({ id, onScrollToNext }) => {
         animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 1 }}
         transition={{ duration: 0.6, delay: 0.4 }}
       >
-        Begini Hasil Risetnya Guys
+        Hasil Penelitian
       </motion.h1>
-
-      {/* Tombol */}
+      {/*
       <motion.button
         className="mt-8 z-30 bg-orange-200 text-orange-900 font-semibold py-2 px-6 rounded-full shadow-md hover:bg-orange-300 transition"
         initial={{ opacity: 0, y: 20 }}
@@ -77,6 +74,7 @@ const Slide5 = ({ id, onScrollToNext }) => {
       >
         Hasil Penelitian ↓
       </motion.button>
+      */}
     </motion.section>
   );
 };

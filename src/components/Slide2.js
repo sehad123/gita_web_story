@@ -55,17 +55,17 @@ const Slide2 = forwardRef((props, ref) => {
       ref={ref}
       id="slide2"
       className="relative h-[800px] flex flex-col items-center justify-center text-center bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/img/2.jpeg')" }}
+      style={{ backgroundImage: "url('/img/2.png')" }}
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
-      <motion.h2 className="text-3xl md:text-4xl mx-20 font-bold" initial={{ opacity: 0, y: -30 }} animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : -30 }} transition={{ duration: 0.6, delay: 0.2 }}>
+      <motion.h2 className="text-3xl md:text-4xl mx-20 font-bold text-white" initial={{ opacity: 0, y: -30 }} animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : -30 }} transition={{ duration: 0.6, delay: 0.2 }}>
         Bagaimana kondisi lahan terbangun di Jawa Timur saat ini?
       </motion.h2>
 
-      <motion.p className="mt-3 text-lg mx-64" initial={{ opacity: 0, y: -20 }} animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : -20 }} transition={{ duration: 0.6, delay: 0.4 }}>
-        Keberadaan lahan terbangun di suatu wilayah dapat dipengaruhi oleh beberapa faktor, seperti kawasan industri, pembangunan infrastruktur, kepadatan penduduk, dan sebagainya. Mari kita simak beritanya!
+      <motion.p className="mt-7 text-lg mx-40 text-white" initial={{ opacity: 0, y: -20 }} animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : -20 }} transition={{ duration: 0.6, delay: 0.4 }}>
+        Keberadaan lahan terbangun di suatu wilayah dapat dipengaruhi oleh beberapa faktor, seperti kawasan industri, pembangunan infrastruktur, kepadatan penduduk, dan sebagainya. <span className="text-pink-300">Mari kita simak beritanya!</span>
       </motion.p>
 
       <motion.div
@@ -74,36 +74,36 @@ const Slide2 = forwardRef((props, ref) => {
         animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0.9 }}
         transition={{ duration: 0.6, delay: 0.6 }}
       >
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center p-3 bg-pink-200">
           <div className="w-full">
             <img src={images[currentIndex]} alt="Berita" className="w-full h-90 object-cover" />
           </div>
-          <div className="p-6">
-            <button onClick={openLink} className="mt-1 px-6 py-2 bg-pink-500 text-white font-bold rounded-full flex items-center gap-2">
-              Lihat Berita <span>👁</span>
+          <div className="p-2">
+            <button onClick={openLink} className="mt-1 mt-2 px-6 py-2 bg-gray-800 text-white font-bold rounded-full flex items-center gap-1 transform hover:scale-105 transition-transform duration-300">
+              LIHAT BERITA <span>👁</span>
             </button>
           </div>
         </div>
       </motion.div>
 
       <motion.button
-        className="absolute left-10 top-1/2 transform -translate-y-1/2 bg-pink-500 text-white p-3 rounded-full"
+        className="absolute left-20 top-1/2 transform -translate-y-1/2 bg-pink-200 text-gray-700 font-extrabold p-3 rounded-full"
         initial={{ opacity: 0, x: -30 }}
         animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : -30 }}
         transition={{ duration: 0.6, delay: 0.8 }}
         onClick={prevSlide}
       >
-        ←
+        <p>←</p>
       </motion.button>
 
       <motion.button
-        className="absolute right-10 top-1/2 transform -translate-y-1/2 bg-pink-500 text-white p-3 rounded-full"
+        className="absolute right-20 top-1/2 transform -translate-y-1/2 bg-pink-200 text-gray-700 font-extrabold p-3 rounded-full"
         initial={{ opacity: 0, x: 30 }}
         animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : 30 }}
         transition={{ duration: 0.6, delay: 0.8 }}
         onClick={nextSlide}
       >
-        →
+        <p>→</p>
       </motion.button>
     </motion.section>
   );
