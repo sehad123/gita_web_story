@@ -15,6 +15,7 @@ import Prediksi from "./hasil/prediksi";
 import Data from "./hasil/data";
 import Slide7 from "./components/Slide7";
 import Slide8 from "./components/Slide8";
+import Kesimpulan from "./hasil/kesimpulan";
 
 
 function App() {
@@ -44,12 +45,11 @@ function App() {
       <Data ref={dataRef} />
       <Slide5 id="hasil" onScrollToNext={handleScrollToData} />
       <Peta />
-      
       <Perkembangan />
       <Simulasi />
-      
       <Prediksi />
-      
+      <Kesimpulan />
+      <Slide8 />
     </div>
   );
 }

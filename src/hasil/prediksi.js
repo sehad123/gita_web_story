@@ -7,7 +7,8 @@ const Prediksi = () => {
       style={{ backgroundImage: "url('/img/prediksi-bg.png')"}}
       >
       <motion.div className="max-w-4xl mx-auto space-y-6" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
-        <h3 className="text-3xl font-bold text-center text-pink-400 pb-12 pt-5">Prediksi Lahan Terbangun di Jawa Timur Tahun 2029</h3>
+        <h3 className="text-3xl font-bold text-center text-pink-400 pb-12">Prediksi Lahan Terbangun di Jawa Timur Tahun 2029</h3>
+        <h4 className="text-2xl font-bold text-center text-pink-200 pb-8 pt-5">Peta Sebaran Lahan Terbangun Jawa Timur Tahun 2029</h4>
         <div className="flex justify-center">
           <img src="/img/Hasil/Prediksi/7. 2029Simulasi ke-2 (2).png" alt="Tabel Uji Akurasi" className="rounded-xl shadow-md max-w-[550px] object-contain transition-transform duration-300 hover:scale-105" />
         </div>
@@ -25,8 +26,9 @@ const Prediksi = () => {
           </p>
         </div>
 
-        <div className="flex justify-center mb-4 pt-12">
+        <div className="flex justify-center mb-4 pt-7">
             <div className="overflow-x-auto pb-2">
+              <h4 className="text-2xl font-bold text-center text-pink-200 pb-8 pt-5">Perkembangan Lahan Terbangun Selama 2014-2024</h4>
               <table className="min-w-max bg-[#f9f6ef] text-[#5c4b3b] rounded-lg shadow-md text-center border-collapse">
                 <thead>
                   <tr>
@@ -84,7 +86,8 @@ const Prediksi = () => {
           </p>
         </div>
 
-        <div className="flex justify-center pt-12 pb-3 transition-transform duration-300 hover:scale-105">
+        <h4 className="text-2xl font-bold text-center text-pink-200 pt-12">Peta Perkembangan Lahan Terbangun Terhadap Luas Wilayah</h4>
+        <div className="flex justify-center pt-7 pb-3 transition-transform duration-300 hover:scale-105">
           <img src="/img/Hasil/Prediksi/2-[2024-2029].png" alt="Tabel Uji Akurasi" className="rounded-xl shadow-md max-w-[550px] object-contain transition-transform duration-300 hover:scale-105" />
         </div>
 

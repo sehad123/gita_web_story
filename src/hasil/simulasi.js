@@ -63,13 +63,13 @@ const SimulasiValidasi = () => {
                 </div>
                 <p className="text-justify text-sm bg-white/70 backdrop-blur p-4 rounded-lg shadow-inner transition-transform duration-300 hover:scale-105">
                   Hasil simulasi menunjukkan luas lahan terbangun 
-Provinsi Jawa Timur sebesar 6.584.559.900 m2 atau 13,77% 
-dari total luas wilayah Provinsi Jawa Timur. Angka ini 
-menunjukkan peningkatan dari tahun 2019 yaitu sebesar 
-451.599.000 m2. Pola sebaran lahan 
-terbangun hasil simulasi cenderung mengikuti pola sebaran 
-saat periode 2014-2019. Kondisi ini mencerminkan adanya 
-keterkaitan pola perkembangan dari periode sebelumnya.
+                  Provinsi Jawa Timur sebesar 6.584.559.900 m2 atau 13,77% 
+                  dari total luas wilayah Provinsi Jawa Timur. Angka ini 
+                  menunjukkan peningkatan dari tahun 2019 yaitu sebesar 
+                  451.599.000 m2. Pola sebaran lahan 
+                  terbangun hasil simulasi cenderung mengikuti pola sebaran 
+                  saat periode 2014-2019. Kondisi ini mencerminkan adanya 
+                  keterkaitan pola perkembangan dari periode sebelumnya.
                 </p>
               </motion.div>
             ) : (
