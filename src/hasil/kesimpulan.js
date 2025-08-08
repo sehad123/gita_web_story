@@ -23,21 +23,21 @@ const Kesimpulan = ({ id, onScrollToNext }) => {
       nama: "Maximum Likelihood Classification (MLC)",
       jabatan: "Klasifikasi",
       deskripsi:
-        "1.	Pemanfaatan citra Landsat-8 untuk menganalisis perkembangan lahan terbangun di Jawa Timur selama periode 2014-2024 menghasilkan peta sebaran lahan terbangun tahun 2014, 2019, dan 2024 dengan tingkat akurasi yang sangat baik, yaitu sebesar 93,51%, 92,78%, dan 94,33%. Perkembangan lahan terbangun selama periode 2014-2024 cenderung memusat di wilayah Kota Surabaya dan sekitarnya. Sementara itu, kontribusi perkembangan lahan terbangun terhadap luas wilayah masing-masing kabupaten/kota lebih terlihat untuk wilayah perkotaan, karena memiliki luas wilayah administrasi yang relatif kecil, seperti Kota Surabaya, Mojokerto, Malang, Madiun, dan Blitar.",
+        "Pemanfaatan citra Landsat-8 untuk menganalisis perkembangan lahan terbangun di Jawa Timur selama periode 2014-2024 menghasilkan peta sebaran lahan terbangun tahun 2014, 2019, dan 2024 dengan tingkat akurasi yang sangat baik, yaitu sebesar 93,51%, 92,78%, dan 94,33%. Perkembangan lahan terbangun selama periode 2014-2024 cenderung memusat di wilayah Kota Surabaya dan sekitarnya. Sementara itu, kontribusi perkembangan lahan terbangun terhadap luas wilayah masing-masing kabupaten/kota lebih terlihat untuk wilayah perkotaan, karena memiliki luas wilayah administrasi yang relatif kecil, seperti Kota Surabaya, Mojokerto, Malang, Madiun, dan Blitar.",
       foto: "/img/no1.png", // ganti sesuai path sebenarnya
     },
     {
       nama: "Cellular Automata (CA)",
       jabatan: "Simulasi dan Prediksi",
       deskripsi:
-        "2.	Penggunaan metode Cellular Automata sebagai model prediksi menghasilkan model dengan tingkat akurasi sebesar 95,83%. Cellular Automata dapat menangkap pola perkembangan lahan terbangun yang terjadi di tahun sebelumnya, sehingga model yang dihasilkan dapat merepresentasikan keadaan di masa mendatang. Prediksi lahan terbangun tahun 2029 masih memiliki pola yang sama dengan tahun-tahun sebelumnya, yaitu memusat di Kota Surabaya dan sekitarnya, terutama di wilayah perkotaan.",
+        "Penggunaan metode Cellular Automata sebagai model prediksi menghasilkan model dengan tingkat akurasi sebesar 95,83%. Cellular Automata dapat menangkap pola perkembangan lahan terbangun yang terjadi di tahun sebelumnya, sehingga model yang dihasilkan dapat merepresentasikan keadaan di masa mendatang. Prediksi lahan terbangun tahun 2029 masih memiliki pola yang sama dengan tahun-tahun sebelumnya, yaitu memusat di Kota Surabaya dan sekitarnya, terutama di wilayah perkotaan.",
       foto: "/img/no2.png", // ganti sesuai path sebenarnya
     },
     {
       nama: "Cellular Automata (CA)",
       jabatan: "Simulasi dan Prediksi",
       deskripsi:
-        "3.	Web story yang dihasilkan dapat memberikan informasi terkait perkembangan lahan terbangun selama periode 2014-2024 hingga prediksi di tahun 2029 secara informatif dan cakupan yang lebih luas. Informasi pada web story disusun dengan alur seperti cerita, sehingga pengguna tidak merasa bosan saat mengakses informasi. Penyajian web story yang mengutamakan aspek visual, seperti warna, elemen, dan grafis, menjadi daya tarik tersendiri bagi pengguna karena informasi tidak hanya disajikan dalam bentuk teks, tetapi juga dilengkapi dengan dekorasi yang menarik dan tidak membosankan.",
+        "Web story yang dihasilkan dapat memberikan informasi terkait perkembangan lahan terbangun selama periode 2014-2024 hingga prediksi di tahun 2029 secara informatif dan cakupan yang lebih luas. Informasi pada web story disusun dengan alur seperti cerita, sehingga pengguna tidak merasa bosan saat mengakses informasi. Penyajian web story yang mengutamakan aspek visual, seperti warna, elemen, dan grafis, menjadi daya tarik tersendiri bagi pengguna karena informasi tidak hanya disajikan dalam bentuk teks, tetapi juga dilengkapi dengan dekorasi yang menarik dan tidak membosankan.",
       foto: "/img/no3.png", // ganti sesuai path sebenarnya
     },
   ];
