@@ -2,6 +2,15 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const Peta = () => {
+  const sebaranData = [
+  {
+    title: "Perkembangan Secara Umum (2014–2024)",
+    images: ["/img/Grafik/2014.png", "/img/Grafik/2019.png", "/img/Grafik/2024.png"],
+    description:
+      "Secara umum, luas lahan terbangun terus mengalami peningkatan dari tahun 2014, 2019, hingga 2024 di setiap kabupaten dan kota. Kota Surabaya, Malang, Blitar, Mojokerto, dan Madiun memiliki persentase tertinggi selama tahun 2014, 2019, dan 2024. Kontribusi lahan terbangun cenderung lebih dominan di wilayah perkotaan. Hal ini disebabkan karena luas wilayah perkotaan relatif kecil, sehingga penambahan luas lahan terbangun sangat berpengaruh terhadap komposisi wilayahnya.",
+  },
+];
+
   const grafik = [
     {
       src: "/img/Hasil/Peta sebaran/grafik luas lahan terbangun.png",
@@ -115,6 +124,32 @@ menyebar ke wilayah Bojonegoro, Pasuruan, dan Probolinggo.
             </p>
           </div>
         </div>
+
+        <div className="bg-pink-500 text-white text-center rounded-2xl mx-auto w-[470px] m-[60px]">
+          <p className="text-lg font-bold text-center text-pink-200 pb-2 pt-2">
+            Persentase perkembangan luas lahan terbangun terhadap luas wilayah
+          </p>
+        </div>
+
+        {sebaranData.map((item, index) => (
+          <div key={index} className="space-y-4 pb-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {item.images.map((img, i) => (
+                <div key={i} className="text-center">
+                  <div className="bg-pink-300 rounded-lg mx-auto w-[100px] h-[25px] flex justify-center items-center">
+                    <p className="text-base font-bold mb-2 mt-2">
+                      {i === 0 ? "2014": i=== 1 ? "2019" : "2024"}
+                    </p>
+                  </div>
+                  <div className="pt-3">
+                    <img src={img} className="rounded-xl shadow-md w-full object-contain border-2 border-white transition-transform duration-300 hover:scale-105" />
+                  </div>
+                </div>
+              ))}
+            </div>
+            <p className="text-justify bg-white/60 backdrop-blur p-4 text-sm rounded-lg shadow-inner transition-transform duration-300 hover:scale-105">{item.description}</p>
+          </div>
+        ))}
       </motion.div>
     </section>
   );

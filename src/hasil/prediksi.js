@@ -15,7 +15,7 @@ const Prediksi = () => {
 
         <div className="pt-2 pb-8">
           <p className="text-justify text-sm bg-white/70 backdrop-blur p-4 rounded-lg shadow-inner transition-transform duration-300 hover:scale-105">
-              Hasil simulasi menunjukkan luas lahan terbangun 
+              Hasil prediksi menunjukkan luas lahan terbangun 
               Provinsi Jawa Timur sebesar 6.584.559.900 m2 atau 13,77% 
               dari total luas wilayah Provinsi Jawa Timur. Angka ini 
               menunjukkan peningkatan dari tahun 2019 yaitu sebesar 
@@ -86,14 +86,14 @@ const Prediksi = () => {
           </p>
         </div>
 
-        <h4 className="text-2xl font-bold text-center text-pink-200 pt-12">Peta Perkembangan Lahan Terbangun Terhadap Luas Wilayah</h4>
+        <h4 className="text-2xl font-bold text-center text-pink-200 pt-12">Persentase Luas Lahan Terbangun Terhadap Luas Wilayah</h4>
         <div className="flex justify-center pt-7 pb-3 transition-transform duration-300 hover:scale-105">
-          <img src="/img/Hasil/Prediksi/2-[2024-2029].png" alt="Tabel Uji Akurasi" className="rounded-xl shadow-md max-w-[550px] object-contain transition-transform duration-300 hover:scale-105" />
+          <img src="/img/Grafik/2029.png" alt="Tabel Uji Akurasi" className="rounded-xl shadow-md max-w-[550px] object-contain transition-transform duration-300 hover:scale-105" />
         </div>
 
         <div className="pb-5">
           <p className="text-justify text-sm bg-white/70 backdrop-blur p-4 rounded-lg shadow-inner transition-transform duration-300 hover:scale-105">
-              Gambar tersebut menunjukkan adanya konsentrasi pertumbuhan lahan di wilayah tertentu, seperti Kabupaten Lamongan, Bojonegoro, Sidoarjo, dan Mojokerto yang memiliki proporsi perkembangan lahan terbangun minimal pada rentang 3,04%-6,08% dari tiga periode terakhir. Sedangkan, wilayah lainnya cenderung konsisten dengan pertumbuhan lahan dengan rentang 0%-3,04%. Hal ini menunjukkan adanya polarisasi pembangunan di wilayah-wilayah tertentu. Wilayah tersebut mungkin memiliki fasilitas yang lengkap, aksesibilitas tinggi, atau kebijakan zonasi yang mendukung pembangunan. Oleh karena itu, perkembangan lahan terbangun banyak terjadi di wilayah tersebut.
+              Grafik tersebut menunjukkan kontribusi lahan terbangun yang diprediksi pada tahun 2029 cenderung berada di wilayah perkotaan. Hal ini dapat terjadi karena luas wilayah administrasi perkotaan relatif lebih kecil. Jika dilihat dari tahun-tahun sebelumnya, Kota Surabaya, Mojokerjo, Malang, Blitar, dan Madiun selalu menempati posisi lima teratas. Kondisi tersebut menunjukkan bahwa sebenarnya sejak tahun 2014, perkembangan lahan terbangun di Jawa Timur memiliki pola yang sama. Dengan demikian, kontribusi lahan terbangun terbesar di Provinsi Jawa Timur untuk tahun 2029 diprediksi masih memusat di wilayah perkotaan.
           </p>
         </div>
       </motion.div>

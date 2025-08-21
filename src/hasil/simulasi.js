@@ -37,7 +37,7 @@ const SimulasiValidasi = () => {
       >
         <h3 className="text-3xl font-bold text-center text-pink-400 mb-8">
           {showSimulasi
-            ? "Simulasi Lahan Terbangun Jawa Timur 2024"
+            ? "Prediksi Lahan Terbangun di Jawa Timur Tahun 2024"
             : "Analisis Tabel Uji Akurasi"}
         </h3>
 
@@ -62,7 +62,7 @@ const SimulasiValidasi = () => {
                   />
                 </div>
                 <p className="text-justify text-sm bg-white/70 backdrop-blur p-4 rounded-lg shadow-inner transition-transform duration-300 hover:scale-105">
-                  Hasil simulasi menunjukkan luas lahan terbangun 
+                  Hasil prediksi tahun 2024 menunjukkan luas lahan terbangun 
                   Provinsi Jawa Timur sebesar 6.584.559.900 m2 atau 13,77% 
                   dari total luas wilayah Provinsi Jawa Timur. Angka ini 
                   menunjukkan peningkatan dari tahun 2019 yaitu sebesar 
